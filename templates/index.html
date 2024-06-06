@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ML Prediction</title>
+  </head>
+  <body>
+    <h1>Home page for titanic prediction</h1>
+    <p>Enter the details of a person on the titanic voyege </p>
+    <p>We will output a prediction for you</p>
+    <a href="{% url 'result' %}">click to go to the result page</a>
+    <br>
+    <form  action="{% url 'result' %}">
+      {% csrf_token %}
+      <p>pclass</p>
+      <input type="text" name="pclass">
+      <p>sex</p>
+      <input type="text" name="sex">
+      <p>age</p>
+      <input type="text" name="age">
+      <p>sibsp</p>
+      <input type="text" name="sibsp">
+      <p>parch</p>
+      <input type="text" name="parch">
+      <p>fare</p>
+      <input type="text" name="fare">
+      <p>embarked</p>
+      <input type="text" name="embarked">
+      <p>title</p>
+      <input type="text" name="Title">
+      <input type="submit">
+
+
+    </form>
+
+  </body>
+</html>
